@@ -1,92 +1,68 @@
-import {
-  Banknote,
-  ClipboardCheck,
-  FileSpreadsheet,
-  FolderKanban,
-  LineChart,
-  ReceiptText,
-} from "lucide-react";
-
-import { SectionHeading } from "@/components/site/section-heading";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
 const services = [
-  {
-    title: "Monthly bookkeeping",
-    description:
-      "Transaction coding, reconciliations, month-end close, and dependable financial statements.",
-    icon: ReceiptText,
-  },
-  {
-    title: "Nonprofit accounting",
-    description:
-      "Fund accounting, restricted revenue tracking, functional expenses, and board packet support.",
-    icon: FolderKanban,
-  },
-  {
-    title: "Grant reporting support",
-    description:
-      "Award schedules, expense documentation, budget-to-actual reporting, and clean audit trails.",
-    icon: ClipboardCheck,
-  },
-  {
-    title: "Payroll and vendor coordination",
-    description:
-      "Accounting workflows that align with payroll providers, bill pay, reimbursements, and approvals.",
-    icon: Banknote,
-  },
-  {
-    title: "Financial reporting",
-    description:
-      "Plain-English reporting packages that highlight cash, margins, variances, and action items.",
-    icon: LineChart,
-  },
-  {
-    title: "Cleanup and systems organization",
-    description:
-      "Chart of accounts cleanup, catch-up bookkeeping, process mapping, and accounting file hygiene.",
-    icon: FileSpreadsheet,
-  },
+  "QuickBooks Online",
+  "Bookkeeping",
+  "Financial reporting",
+  "Grant & fund accounting",
+  "Audit preparation",
+  "Accounting process improvement",
+];
+
+const experience = [
+  "Nonprofit accounting support",
+  "Board and grant reporting",
+  "QuickBooks Online and spreadsheet workflows",
+  "Reliable monthly communication",
+];
+
+const outcomes = [
+  "Cleaner books",
+  "More useful reports",
+  "Better audit readiness",
 ];
 
 export function Services() {
   return (
-    <section id="services" className="section-padding bg-secondary/70">
-      <div className="container-page">
-        <SectionHeading
-          eyebrow="Services"
-          title="Accounting operations built for leaders who need answers, not just entries."
-          description="Every engagement is designed around a reliable monthly rhythm: close the books, surface the story, and keep documentation organized before anyone has to ask for it."
-        />
+    <section id="services" className="border-t border-border bg-secondary/35 py-7">
+      <div className="container-page grid gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+            Services and qualifications
+          </p>
+        </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => {
-            const Icon = service.icon;
+        <div className="grid gap-7 md:grid-cols-3">
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight text-foreground">
+              Services
+            </h2>
+            <ul className="mt-3 space-y-1.5 text-sm leading-6 text-muted-foreground">
+              {services.map((service) => (
+                <li key={service}>{service}</li>
+              ))}
+            </ul>
+          </div>
 
-            return (
-              <Card
-                key={service.title}
-                className="rounded-lg border-border bg-white shadow-sm transition-shadow hover:shadow-md"
-              >
-                <CardHeader className="gap-4">
-                  <span className="flex size-10 items-center justify-center rounded-lg bg-accent text-primary">
-                    <Icon className="size-5" aria-hidden="true" />
-                  </span>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm leading-6 text-muted-foreground">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
-            );
-          })}
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight text-foreground">
+              Experience
+            </h2>
+            <ul className="mt-3 space-y-1.5 text-sm leading-6 text-muted-foreground">
+              {experience.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight text-foreground">
+              Why clients call
+            </h2>
+            <ul className="mt-3 space-y-1.5 text-sm leading-6 text-muted-foreground">
+              {outcomes.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>

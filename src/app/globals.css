@@ -50,18 +50,18 @@
 
 :root {
   --background: oklch(1 0 0);
-  --foreground: oklch(0.23 0.032 255);
+  --foreground: oklch(0.22 0.035 240);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.23 0.032 255);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.23 0.032 255);
-  --primary: oklch(0.28 0.075 255);
+  --primary: oklch(0.27 0.07 238);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.96 0.01 255);
+  --secondary: oklch(0.972 0.006 240);
   --secondary-foreground: oklch(0.32 0.036 255);
   --muted: oklch(0.965 0.009 255);
-  --muted-foreground: oklch(0.49 0.028 255);
-  --accent: oklch(0.93 0.025 250);
+  --muted-foreground: oklch(0.45 0.025 240);
+  --accent: oklch(0.91 0.027 225);
   --accent-foreground: oklch(0.28 0.075 255);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.9 0.012 255);
@@ -142,7 +142,7 @@
   }
 
   .section-padding {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-10 sm:py-12;
   }
 
   .subtle-fade {

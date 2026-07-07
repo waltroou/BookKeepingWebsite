@@ -1,52 +1,78 @@
-import { ArrowRight, CheckCircle2, FileCheck2 } from "lucide-react";
+import { Calendar, CheckCircle2, Mail } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/utils";
 
 const assurances = [
-  "Monthly close discipline",
-  "Board-ready reporting",
-  "Grant and restricted fund clarity",
+  "QuickBooks Online support",
+  "Nonprofit fund accounting",
+  "Clear monthly reporting",
 ];
 
 export function Hero() {
   return (
-    <section className="overflow-hidden bg-background">
-      <div className="container-page grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:py-24">
-        <div className="subtle-fade max-w-3xl">
-          <p className="mb-5 inline-flex rounded-lg border border-border bg-secondary px-3 py-1 text-sm font-medium text-primary">
-            Independent bookkeeping for mission-led teams
+    <section className="bg-background">
+      <div className="container-page grid gap-7 py-6 lg:grid-cols-[200px_1fr] lg:gap-10 lg:py-7">
+        <aside className="subtle-fade lg:sticky lg:top-28 lg:self-start">
+          <div className="max-w-56">
+            <div className="aspect-[4/4.6] w-full overflow-hidden rounded-sm bg-secondary">
+              <div className="flex h-full items-center justify-center bg-[linear-gradient(135deg,var(--accent),var(--secondary))] text-center">
+                <div>
+                  <p className="text-4xl font-semibold text-primary">JR</p>
+                  <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                    Photo placeholder
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-4 text-center lg:text-left">
+              <p className="text-xl font-semibold tracking-tight text-foreground">
+                John Roou
+              </p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Independent Bookkeeper
+              </p>
+              <div className="mt-3 flex justify-center lg:justify-start">
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  aria-label="Email John Roou"
+                  className="inline-flex size-10 items-center justify-center rounded-md bg-muted text-foreground transition-colors hover:bg-accent hover:text-primary"
+                >
+                  <Mail className="size-4" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <div className="subtle-fade max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+            {siteConfig.name}
           </p>
-          <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-            Clean books, useful reports, and fewer finance surprises.
+          <h1 className="mt-3 text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground">
+            Bookkeeping and nonprofit accounting support you can rely on.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-            JohnnyRoou Bookkeeping helps nonprofit leaders, finance committees,
-            and small business owners keep accounting organized, current, and
-            ready for decisions.
+          <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground">
+            I help nonprofit leaders and small business owners keep clean books,
+            understand their numbers, and stay prepared for reporting, grants,
+            audits, and board conversations.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#consultation"
+              href="#contact"
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "h-11 rounded-lg px-5 shadow-sm",
+                "h-11 rounded-md px-5 shadow-sm",
               )}
             >
-              Request a consultation
-              <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
-            <a
-              href="#services"
-              className={cn(
-                buttonVariants({ variant: "outline", size: "lg" }),
-                "h-11 rounded-lg px-5",
-              )}
-            >
-              View services
+              <Calendar className="size-4" aria-hidden="true" />
+              Schedule a Call
             </a>
           </div>
-          <ul className="mt-8 grid gap-3 text-sm text-muted-foreground sm:grid-cols-3">
+
+          <ul className="mt-7 grid max-w-3xl gap-3 border-y border-border py-3 text-sm text-muted-foreground sm:grid-cols-3">
             {assurances.map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <CheckCircle2
@@ -57,75 +83,14 @@ export function Hero() {
               </li>
             ))}
           </ul>
-        </div>
 
-        <div
-          className="subtle-fade relative mx-auto w-full max-w-xl lg:ml-auto"
-          style={{ animationDelay: "120ms" }}
-          aria-label="Example financial reporting workspace"
-        >
-          <div className="rounded-lg border border-border bg-white p-4 shadow-[0_18px_50px_rgba(15,23,42,0.10)]">
-            <div className="flex items-center justify-between border-b border-border pb-4">
-              <div>
-                <p className="text-sm font-semibold text-foreground">
-                  June close packet
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  Prepared for executive review
-                </p>
-              </div>
-              <div className="flex items-center gap-2 rounded-md bg-accent px-3 py-2 text-xs font-semibold text-primary">
-                <FileCheck2 className="size-4" aria-hidden="true" />
-                Reconciled
-              </div>
-            </div>
-
-            <div className="grid gap-4 py-5 sm:grid-cols-3">
-              {[
-                ["Cash runway", "8.4 mo"],
-                ["Restricted funds", "$218k"],
-                ["Open items", "3"],
-              ].map(([label, value]) => (
-                <div key={label} className="rounded-lg bg-secondary p-4">
-                  <p className="text-xs font-medium text-muted-foreground">
-                    {label}
-                  </p>
-                  <p className="mt-2 text-2xl font-semibold text-foreground">
-                    {value}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-3">
-              {[
-                ["Program services", "72%", "w-[72%]"],
-                ["Admin operations", "18%", "w-[18%]"],
-                ["Fundraising", "10%", "w-[10%]"],
-              ].map(([label, value, width]) => (
-                <div key={label}>
-                  <div className="mb-1 flex items-center justify-between text-xs">
-                    <span className="font-medium text-foreground">{label}</span>
-                    <span className="text-muted-foreground">{value}</span>
-                  </div>
-                  <div className="h-2 rounded-full bg-secondary">
-                    <div
-                      className={cn("h-2 rounded-full bg-primary", width)}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-5 rounded-lg border border-border p-4">
-              <p className="text-sm font-semibold text-foreground">
-                Finance committee notes
-              </p>
-              <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Payroll accrual posted, grant revenue tied to award schedule,
-                and prior-month variance explanations included.
-              </p>
-            </div>
+          <div className="mt-5 border-b border-border pb-4">
+            <p className="max-w-4xl text-base leading-7 text-muted-foreground">
+              JohnnyRoou Bookkeeping is an independent bookkeeping and nonprofit
+              accounting practice focused on accurate records, useful reporting,
+              and steady communication for organizations that need practical
+              help keeping accounting organized.
+            </p>
           </div>
         </div>
       </div>
