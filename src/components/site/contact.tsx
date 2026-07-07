@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Calendar, Mail, Phone } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
@@ -12,9 +12,6 @@ export function Contact() {
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
             Contact
           </p>
-          <h2 className="mt-2 text-balance text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-            Let&apos;s talk about your books.
-          </h2>
           <p className="mt-3 max-w-xl text-sm leading-6 text-muted-foreground">
             Share what you need help with and I&apos;ll follow up about fit,
             timing, and next steps.
@@ -34,6 +31,14 @@ export function Contact() {
             >
               <Phone className="size-4" aria-hidden="true" />
               {siteConfig.phone}
+            </a>
+            <a
+              href="#"
+              aria-label="Schedule a meeting link coming soon"
+              className="flex items-center gap-3 font-medium text-foreground hover:text-primary"
+            >
+              <Calendar className="size-4" aria-hidden="true" />
+              schedule a meeting
             </a>
           </div>
         </div>
