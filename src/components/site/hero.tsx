@@ -10,22 +10,22 @@ export function Hero() {
           <div className="max-w-56">
             <div className="aspect-[4/4.6] w-full overflow-hidden rounded-sm bg-secondary">
               <Image
-                src="/headshot.jpg"
+                src="/headshot-current.jpg"
                 alt="John Roou"
                 width={520}
                 height={598}
                 priority
                 unoptimized
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-top"
               />
             </div>
 
             <div className="mt-4 text-center lg:text-left">
               <p className="text-xl font-semibold tracking-tight text-foreground">
-                John Roou
+                Johnny Roou
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
-                Independent Bookkeeper
+                Accounting & Advisory
               </p>
             </div>
           </div>
@@ -35,18 +35,22 @@ export function Hero() {
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
             {siteConfig.name}
           </p>
+          <h1 className="mt-3 max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground">
+            Accounting help for nonprofits that need clean books, better
+            procedures, and reliable reporting.
+          </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-muted-foreground">
-            I help nonprofit leaders and small business owners keep clean books,
-            understand their numbers, and stay prepared for reporting, grants,
-            audits, and board conversations.
+            Johnny Roou Accounting & Advisory helps nonprofit leaders get their
+            books organized, establish practical accounting procedures, and
+            prepare for grants, audits, board meetings, and day-to-day financial
+            decisions.
           </p>
 
           <div className="mt-5 border-b border-border pb-4">
             <p className="max-w-4xl text-base leading-7 text-muted-foreground">
-              JohnnyRoou Bookkeeping is an independent bookkeeping and nonprofit
-              accounting practice focused on accurate records, useful reporting,
-              and steady communication for organizations that need practical
-              help keeping accounting organized.
+              Led by Johnny Roou, a West Point graduate, Army veteran, former
+              operations manager, consultant, intelligence analyst, university
+              professor, and nonprofit staff accountant.
             </p>
           </div>
         </div>

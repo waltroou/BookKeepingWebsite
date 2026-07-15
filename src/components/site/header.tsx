@@ -28,7 +28,7 @@ export function Header() {
                 {siteConfig.shortName}
               </span>
               <span className="hidden text-xs font-medium text-muted-foreground sm:block">
-                Bookkeeping and nonprofit accounting
+                Accounting & advisory for nonprofits
               </span>
             </span>
         </Link>

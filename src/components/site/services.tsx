@@ -1,9 +1,10 @@
 const services = [
-  "Bookkeeping",
-  "Financial reporting",
-  "Grant & fund accounting",
-  "Audit preparation",
-  "Process improvement",
+  "QuickBooks setup and cleanup",
+  "Accounting procedures",
+  "Reconciliations",
+  "Donor accounting",
+  "Grant and audit preparation",
+  "Financial reports for leadership and boards",
 ];
 
 const software = [
@@ -16,14 +17,14 @@ const software = [
 const industries = [
   "Nonprofit organizations",
   "Grant-funded programs",
-  "Professional services",
-  "Small businesses",
+  "Donor-supported organizations",
+  "Small mission-driven teams",
 ];
 
-const certifications = [
-  "QuickBooks Online training",
-  "Nonprofit accounting coursework",
-  "Additional certifications listed as earned",
+const credentials = [
+  "West Point graduate",
+  "Army veteran",
+  "Nonprofit staff accountant experience",
 ];
 
 export function Services() {
@@ -39,7 +40,7 @@ export function Services() {
         <div className="grid overflow-hidden rounded-lg border border-border bg-white md:grid-cols-2 xl:grid-cols-4">
           <div className="border-b border-border p-5 md:border-b-0 md:border-r">
             <h2 className="text-base font-semibold tracking-tight text-foreground">
-              Services
+              Problems solved
             </h2>
             <ul className="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
               {services.map((service) => (
@@ -79,10 +80,10 @@ export function Services() {
 
           <div className="p-5">
             <h2 className="text-base font-semibold tracking-tight text-foreground">
-              Certifications
+              Credentials
             </h2>
             <ul className="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
-              {certifications.map((item) => (
+              {credentials.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
