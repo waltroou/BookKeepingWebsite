@@ -5,7 +5,7 @@ export const siteConfig = {
   description:
     "Accounting help for nonprofits that need clean books, better procedures, and reliable reporting.",
   email: "johnroou68@gmail.com",
-  locality: "Serving nonprofits and small businesses remotely",
+  locality: "Serving nonprofits and small businesses",
   navigation: [
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
