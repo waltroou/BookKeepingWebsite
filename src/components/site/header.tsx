@@ -1,9 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Landmark, Phone } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 
 export function Header() {
   return (
@@ -20,9 +18,17 @@ export function Header() {
           className="flex items-center gap-3 font-semibold text-foreground"
           aria-label={`${siteConfig.name} home`}
         >
-          <span className="flex size-9 items-center justify-center rounded-md bg-primary text-primary-foreground">
-            <Landmark className="size-5" aria-hidden="true" />
-            </span>
+          <span className="flex h-10 w-14 items-center justify-center overflow-hidden rounded-md bg-white">
+            <Image
+              src="/JR_logo.png"
+              alt=""
+              width={56}
+              height={38}
+              priority
+              unoptimized
+              className="h-full w-full object-contain"
+            />
+          </span>
             <span className="leading-tight">
               <span className="block text-base tracking-tight">
                 {siteConfig.shortName}
@@ -49,14 +55,10 @@ export function Header() {
         </nav>
 
         <a
-          href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
-          className={cn(
-            buttonVariants({ size: "sm" }),
-            "h-10 rounded-md px-4 text-sm font-semibold shadow-sm",
-          )}
+          href={`mailto:${siteConfig.email}`}
+          className="hidden text-sm font-semibold text-primary transition-colors hover:text-foreground sm:inline-flex"
         >
-          <Phone className="size-4" aria-hidden="true" />
-          <span>{siteConfig.phone}</span>
+          {siteConfig.email}
         </a>
       </div>
     </header>

@@ -1,4 +1,4 @@
-import { Calendar, Mail, Phone } from "lucide-react";
+import { Calendar, Mail } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
@@ -24,13 +24,6 @@ export function Contact() {
             >
               <Mail className="size-4" aria-hidden="true" />
               {siteConfig.email}
-            </a>
-            <a
-              href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
-              className="flex items-center gap-3 text-foreground hover:text-primary"
-            >
-              <Phone className="size-4" aria-hidden="true" />
-              {siteConfig.phone}
             </a>
             <a
               href="#"
@@ -85,7 +78,7 @@ export function Contact() {
             href={`mailto:${siteConfig.email}?subject=Bookkeeping consultation request`}
             className={cn(buttonVariants({ size: "lg" }), "mt-4 h-10 rounded-lg")}
           >
-            Let&apos;s Talk
+            send
           </a>
         </form>
       </div>

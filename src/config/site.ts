@@ -4,8 +4,7 @@ export const siteConfig = {
   url: "https://johnnyroou.com",
   description:
     "Accounting help for nonprofits that need clean books, better procedures, and reliable reporting.",
-  email: "john@johnnyroou.com",
-  phone: "202-510-2087",
+  email: "johnroou68@gmail.com",
   locality: "Serving nonprofits and small businesses remotely",
   navigation: [
     { label: "Services", href: "#services" },

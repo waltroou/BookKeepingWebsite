@@ -22,7 +22,7 @@ export function Hero() {
 
             <div className="mt-4 text-center lg:text-left">
               <p className="text-xl font-semibold tracking-tight text-foreground">
-                Johnny Roou
+                John Roou
               </p>
               <p className="mt-1 text-sm text-muted-foreground">
                 Accounting & Advisory
@@ -32,7 +32,7 @@ export function Hero() {
         </aside>
 
         <div className="subtle-fade max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+          <p className="text-base font-semibold uppercase tracking-[0.2em] text-primary">
             {siteConfig.name}
           </p>
           <h1 className="mt-3 max-w-4xl text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground">
@@ -46,13 +46,7 @@ export function Hero() {
             decisions.
           </p>
 
-          <div className="mt-5 border-b border-border pb-4">
-            <p className="max-w-4xl text-base leading-7 text-muted-foreground">
-              Led by Johnny Roou, a West Point graduate, Army veteran, former
-              operations manager, consultant, intelligence analyst, university
-              professor, and nonprofit staff accountant.
-            </p>
-          </div>
+          
         </div>
       </div>
     </section>

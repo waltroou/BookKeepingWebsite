@@ -4,7 +4,7 @@ export function About() {
       <div className="container-page grid gap-6 lg:grid-cols-[220px_1fr] lg:gap-10">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-            About Johnny Roou
+            About John Roou
           </p>
         </div>
 

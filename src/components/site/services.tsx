@@ -3,6 +3,7 @@ const services = [
   "Accounting procedures",
   "Reconciliations",
   "Donor accounting",
+  "Payroll",
   "Grant and audit preparation",
   "Financial reports for leadership and boards",
 ];
@@ -10,7 +11,6 @@ const services = [
 const software = [
   { label: "QuickBooks Online", mark: "QB" },
   { label: "Excel", mark: "XL" },
-  { label: "Google Sheets", mark: "GS" },
   { label: "Document workflows", mark: "DW" },
 ];
 
@@ -22,9 +22,17 @@ const industries = [
 ];
 
 const credentials = [
-  "West Point graduate",
-  "Army veteran",
-  "Nonprofit staff accountant experience",
+  "Nonprofit staff accountant",
+"QuickBooks bookkeeping",
+"Audit preparation",
+"Donor accounting",
+"Financial reporting",
+"Excel analysis",
+"Army veteran",
+"Former operations manager",
+"Former Army consultant",
+"Former FBI analyst",
+"University professor",
 ];
 
 export function Services() {

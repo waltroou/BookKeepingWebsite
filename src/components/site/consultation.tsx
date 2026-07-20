@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Phone } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
@@ -33,13 +33,6 @@ export function Consultation() {
               <Mail className="size-4" aria-hidden="true" />
               Email {siteConfig.shortName}
               <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
-            <a
-              href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
-              className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-white/20 px-5 text-sm font-medium text-primary-foreground transition-colors hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-            >
-              <Phone className="size-4" aria-hidden="true" />
-              {siteConfig.phone}
             </a>
           </div>
         </div>

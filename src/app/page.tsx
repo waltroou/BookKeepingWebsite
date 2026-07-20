@@ -14,7 +14,6 @@ export default function Home() {
     url: siteConfig.url,
     description: siteConfig.description,
     email: siteConfig.email,
-    telephone: siteConfig.phone,
     areaServed: "United States",
     serviceType: [
       "QuickBooks Online",
