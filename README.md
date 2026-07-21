@@ -13,7 +13,8 @@ Open `http://localhost:3000`.
 ## Contact Form Setup
 
 The site is configured for a static Render deployment, so the inquiry form uses
-Formspree instead of a backend server.
+Formspree instead of a backend server. The current live endpoint is configured
+in `src/config/site.ts`.
 
 1. Create a Formspree form at `https://formspree.io`.
 2. Set the receiving email to `johnroou68@gmail.com`.
