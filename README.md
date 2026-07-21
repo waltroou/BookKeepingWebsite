@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Johnny Roou Accounting & Advisory
 
-## Getting Started
+Static Next.js website for Johnny Roou Accounting & Advisory.
 
-First, run the development server:
+## Local Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contact Form Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The site is configured for a static Render deployment, so the inquiry form uses
+Formspree instead of a backend server.
 
-## Learn More
+1. Create a Formspree form at `https://formspree.io`.
+2. Set the receiving email to `johnroou68@gmail.com`.
+3. Copy the Formspree endpoint. It should look like:
 
-To learn more about Next.js, take a look at the following resources:
+```text
+https://formspree.io/f/your-form-id
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Replace the placeholder in `src/config/site.ts`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```ts
+formEndpoint: "https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID",
+```
 
-## Deploy on Vercel
+with the real endpoint.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Formspree form ID is not a secret API key. Do not add private API keys to
+the frontend.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Checks
+
+```bash
+npm run lint
+npm run build
+```

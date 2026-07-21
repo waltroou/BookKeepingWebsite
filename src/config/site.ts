@@ -5,10 +5,6 @@ export const siteConfig = {
   description:
     "Accounting help for nonprofits that need clean books, better procedures, and reliable reporting.",
   email: "johnroou68@gmail.com",
+  formEndpoint: "https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID",
   locality: "Serving nonprofits and small businesses",
-  navigation: [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
-  ],
 };
